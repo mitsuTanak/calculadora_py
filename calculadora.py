@@ -37,7 +37,7 @@ class Calculadora:
         self.fonte_display = ('Roboto', 36) #Fonte do display
 
         # Configuração do icone da janela
-        icon_path = resource_path("calc.ico")
+        icon_path = resource_path("imgs/calc.ico")
         self.janela.iconbitmap(icon_path) # Define o icone da janela
 
         # Frame para o display
@@ -91,7 +91,7 @@ class Calculadora:
         self.frame_imagem.pack(fill='both', expand=True, pady=10)
 
         # Carregando e exibindo a imagem SENAI
-        imagem_path = resource_path("Senai.png")
+        imagem_path = resource_path("imgs/Senai.png")
         imagem = Image.open(imagem_path)
         imagem = imagem.resize((300, 100), Image.LANCZOS) # Redimensiona a imagem mantendo a qualidade
         imagem_tk = ImageTk.PhotoImage(imagem) # Converte a imagem para um formato competivel com tkinter
@@ -116,7 +116,7 @@ class Calculadora:
         self.seletor_tema.bind("<<ComboboxSelected>>", self.mudar_tema)
 
         # Meu nome
-        self.label_nome = ttk.Label(self.frame_tema, text="Lívia Figueiredo®", font=('Roboto', 12))
+        self.label_nome = ttk.Label(self.frame_tema, text="PedroMitsuaki®", font=('Roboto', 7))
         self.label_nome.pack(side='top', pady=(0, 5))
 
         # Iniciar a janela principal
